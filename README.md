@@ -79,7 +79,7 @@ $ yarn build:pro
 
 ## 详细配置
 
-关于如何搭建此模板，请查看 [QuickStart](https://github.com/yesmore/QuickStart-Vue3/blob/main/QuickStart)。
+关于如何搭建此模板，请查看 [QuickStart](https://github.com/yesmore/QuickStart-Vue3/blob/main/QuickStart.md)。
 
 ## License
 
