@@ -8,7 +8,8 @@
     "serve": "vite preview",
     "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
     "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "push": "git add . && git commit -m '🚀' && git push"
   },
   "dependencies": {
     "axios": "^0.24.0",
