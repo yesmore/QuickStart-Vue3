@@ -1,6 +1,19 @@
 # QuickStart-Vue3
 
-## 环境准备
+`QuickStart-Vue3` 结合了 `Vue3+Vite2+TypeScript+Pinia` 等Vue技术栈，简单轻便，**开箱即用**。
+
+## 特点
+
+- 基于 `Vue3+Vite2+TypeScript+Pinia`
+- 支持代码格式化 `ESLint + Prettier`
+- 支持 [husky](https://github.com/typicode/husky) 和 [lint-staged](https://github.com/okonet/lint-staged) 自动化代码规范
+- 支持`axios(ts)`（已封装）
+- 内置 `SCSS`
+- 依赖 `naive-ui`（可自行更换）
+
+## 快速开始
+
+### 环境准备
 
 - Vscode 编辑器
 - Chrome 浏览器
@@ -8,38 +21,40 @@
 - Vue Language Features (Volar) ：Vue3必备插件
 - Vue 3 Snippets：代码提示插件
 
-## 常用命令
+### 常用命令
 
-### 克隆项目
+#### 克隆项目
 
 ```shell
-$git clone https://github.com/yesmore/QuickStart-Vue3.git
+$ git clone https://github.com/yesmore/QuickStart-Vue3.git
 ```
 
-### 本地调试
+#### 本地调试
 
-```bash
-cd QuickStart-Vue3
+```shell
+$ cd QuickStart-Vue3
+
 # 安装依赖
-yarn
+$ yarn
 # 启动
-yarn dev
+$ yarn dev
 ```
 
 
 
-### 代码格式化
+#### 代码格式化
 
 运行以下 `命令 `测试下代码检查 `格式化` 效果:
 
-```bash
+```shell
 # eslint 检查
-yarn lint
+$ yarn lint
+
 # prettier 自动格式化
-yarn prettier
+$ yarn prettier
 ```
 
-### 提交代码到本地仓库
+#### 提交代码到本地仓库
 
 执行 `git commit` 操作，会**自动执行代码格式化**：
 
@@ -48,7 +63,7 @@ $ git add .
 $ git commit -m 'test'
 ```
 
-### 打包
+#### 项目打包
 
 ```shell
 # 开发环境
