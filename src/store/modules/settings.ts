@@ -1,18 +1,22 @@
 import { defineStore } from 'pinia'
+import piniaStore from '../index'
 
-export const useMainStore = defineStore({
-  id: 'mian',
+export const useSettingsStore = defineStore({
+  id: 'settings',
   state: () => ({
-    name: '超级管理员',
+    name: '未登陆',
   }),
   getters: {
     nameLength: state => state.name.length,
   },
   actions: {
     async insertPost(data: string) {
-      // 可以做异步
       // await doAjaxRequest(data);
       this.name = data
     },
   },
 })
+
+export function useSettingsOutsideStore() {
+  return useSettingsStore(piniaStore)
+}

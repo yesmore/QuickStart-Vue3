@@ -2,7 +2,7 @@
   "version": "0.0.0",
   "license": "ISC",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode development",
     "build:dev": "vite build --mode development",
     "build:pro": "vite build --mode production",
     "serve": "vite preview",
@@ -12,10 +12,12 @@
     "push": "git add . && git commit -m '🚀' && git push"
   },
   "dependencies": {
+    "@types/qs": "^6.9.7",
     "axios": "^0.24.0",
     "naive-ui": "^2.21.2",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.0-rc.10",
+    "qs": "^6.10.3",
     "vfonts": "^0.1.0",
     "vue": "^3.2.2",
     "vue-router": "4"
