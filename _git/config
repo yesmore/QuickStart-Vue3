@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	hooksPath = .husky
+[remote "origin"]
+	url = https://github.com/yesmore/QuickStart-Vue3
+	fetch = +refs/heads/*:refs/remotes/origin/*
