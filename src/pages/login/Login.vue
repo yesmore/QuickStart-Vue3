@@ -12,6 +12,9 @@ import { NButton } from 'naive-ui'
 
 const mainStore = useMainStore()
 
+// .env
+console.log(import.meta.env.VITE_APP_WEB_URL)
+
 const updateName = () => {
   mainStore.$patch({
     name: '名称被修改了,nameLength也随之改变了',

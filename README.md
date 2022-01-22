@@ -1,66 +1,4 @@
-> 哈喽,大家好 我是`xy`👨🏻‍💻。 从我最初接触`vue3`版本到现在已经有一年的时间。由于 vue3.2 版本的发布，`<script setup>` 的实验性标志已经去掉，已经陆陆续续有不少公司开始使用 `vue3.2`开发项目了。这篇文章就来帮助大家如何快速使用 `vue3.x`，`typeScript`， `vite` 搭建一套企业级的开发脚手架 🤖。废话不多说，直接上手开搞 💪
-
-## 搭建前准备
-
-1. `Vscode`: 前端人必备写码神器
-2. `Chrome`：对开发者非常友好的浏览器(反正我是很依赖它的)
-3. `Nodejs`&`npm`：配置本地开发环境，安装 Node 后你会发现 npm 也会一起安装下来
-4. `Vue.js devtools`：浏览器调试插件
-5. `Vue Language Features (Volar)`：Vscode 开发 vue3 必备插件，提供语法高亮提示，非常好用
-6. `Vue 3 Snippets`：vue3 快捷输入
-
-> 由于`Vue.js devtools` 需要到谷歌扩展商店才能下载,贴心 ❤️ 的`xy`已经为大家准备好了`crx`文件了,公众号回复:【`VueDevTools`】可自动获取哦 💪
-
-## Vue2 与 Vue3 的区别
-
-`Vue3`由于完全由`TS`进行重写，在应用中对类型判断的定义和使用有很强的表现。同一对象的多个键返回值必须通过定义对应的接口（`interface`）来进行类型定义。要不然在 ESLint 时都会报错。
-
-`vue2` 的双向数据绑定是利用 `ES5` 的一个 `API Object.definePropert()`对数据进行劫持 结合 `发布订阅`模式的方式来实现的。`Vue3` 中使用了 `es6` 的 `ProxyAPI` 对数据代理。
-
-`Vue3`支持碎片(`Fragments`)
-
-Vue2 与 Vue3 最大的区别: Vue2 使用`Options API`而 Vue3 使用的`Composition API`
-
-生命周期钩子变化:
-
-```js
-Vue2 ~~~~~~~~~~~ vue3
-beforeCreate  -> setup()
-created       -> setup()
-beforeMount   -> onBeforeMount
-mounted       -> onMounted
-beforeUpdate  -> onBeforeUpdate
-updated       -> onUpdated
-beforeDestroy -> onBeforeUnmount
-destroyed     -> onUnmounted
-activated     -> onActivated
-deactivated   -> onDeactivated
-```
-
-## 介绍 vite
-
-> Vite：下一代前端开发与构建工具
-
-- 💡 极速的开发服务器启动
-- ⚡️ 轻量快速的热模块重载（HMR）
-- 🛠️ 丰富的功能
-- 📦 自带优化的构建
-- 🔩 通用的插件接口
-- 🔑 完全类型化的 API
-
-`Vite` （法语意为 “迅速”，发音 /vit/）是一种全新的前端构建工具，它极大地改善了前端开发体验。
-
-它主要由两部分组成：
-
-- 一个开发服务器，它基于 原生 `ES` 模块 提供了 丰富的内建功能，如速度快到惊人的 模块热更新（HMR）。
-
-- 一套构建指令，它使用 `Rollup` 打包你的代码，并且它是预配置的，可以输出用于生产环境的优化过的静态资源。
-
-- Vite 意在提供开箱即用的配置，同时它的 插件 API 和 JavaScript API 带来了高度的`可扩展性`，并有完整的类型支持。
-
-## 使用 vite 快速创建脚手架
-
-> 兼容性注意:Vite 需要 `Node.js` 版本 `>= 12.0.0`。
+# Vue3.2 + Pinia + Vite2 + Typescript3
 
 1. 第一步: 在需要创建项目文件目录下打开 `cmd` 运行以下命令
 
@@ -738,27 +676,7 @@ export interface ILoginApi {
 }
 ```
 
-至此,一个简单地请求封装完成了!!!!
 
-除了自己手动封装 axios ,这里还推荐一个 vue3 的请求库: `VueRequest`,非常好用,下面来看看 `VueRequest`有哪些比较好用的功能吧!!!
-
-- 🚀 所有数据都具有响应式
-- 🔄 轮询请求
-- 🤖 自动处理错误重试
-- 🗄 内置请求缓存
-- 💧 节流请求与防抖请求
-- 🎯 聚焦页面时自动重新请求
-- ⚙️ 强大的分页扩展以及加载更多扩展
-- 📠 完全使用 Typescript 编写，具有强大的类型提示
-- ⚡️ 兼容 Vite
-- 🍃 轻量化
-- 📦 开箱即用
-
-![](https://files.mdnice.com/user/16854/c587ba05-5a22-4024-a831-6fecffee5d20.png)
-
-是不是很强大 💪
-
-> 官网链接: https://www.attojs.com/
 
 ## 状态管理 pinia
 
@@ -938,15 +856,6 @@ console.log(import.meta.env.VITE_APP_WEB_URL)
 
 ## 使用组件库 Naive UI
 
-> 组件库选择，这里我们选择 `Naive UI` 至于为什么选择它？我可以直接说`尤大大`推荐的吗？
-
-- 官方介绍：
-  - 一个 `Vue 3` 组件库
-  - 比较完整，`主题可调`，使用 `TypeScript`，不算太慢
-  - 有点意思
-
-介绍还是比较谦虚的，既然`尤大`推荐，肯定有它的优势了!!!
-
 ### 安装 Naive UI
 
 ```bash
@@ -956,7 +865,7 @@ yarn add naive-ui
 yarn add vfonts
 ```
 
-### 如何使用
+### 使用
 
 ```js
 import { NButton } from "naive-ui"
@@ -1118,25 +1027,3 @@ export default defineConfig({
 
 💡最后给大家奉上仓库地址吧：https://github.com/xushanpei/vite_vue3_ts
 
-## 写在最后
-
-> `公众号`：`前端开发爱好者` 专注分享 `web` 前端相关`技术文章`、`视频教程`资源、热点资讯等，如果喜欢我的分享，给 🐟🐟 点一个`赞` 👍 或者 ➕`关注` 都是对我最大的支持。
-
-欢迎`长按图片加好友`，我会第一时间和你分享`前端行业趋势`，`面试资源`，`学习途径`等等。
-
-![](https://files.mdnice.com/user/16854/b382cc29-13f4-4cd7-86ae-c669cb7ae117.jpg)
-
-关注公众号后，在首页：
-
-- 回复`面试题`，获取最新大厂面试资料。
-- 回复`简历`，获取 3200 套 简历模板。
-- 回复`React实战`，获取 React 最新实战教程。
-- 回复`Vue实战`，获取 Vue 最新实战教程。
-- 回复`ts`，获取 TypeAcript 精讲课程。
-- 回复`vite`，获取 精讲课程。
-- 回复`uniapp`，获取 uniapp 精讲课程。
-- 回复`js书籍`，获取 js 进阶 必看书籍。
-- 回复`Node`，获取 Nodejs+koa2 实战教程。
-- 回复`数据结构算法`，获取 数据结构算法 教程。
-- 回复`架构师`，获取 架构师学习资源教程。
-- 更多教程资源应用尽有，欢迎`关注获取`

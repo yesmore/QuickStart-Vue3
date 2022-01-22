@@ -1,5 +1,6 @@
 //http.ts
 import axios, { AxiosRequestConfig } from 'axios'
+// nprogress 用于请求 loading
 import NProgress from 'nprogress'
 
 // 设置请求头和请求路径
@@ -24,6 +25,7 @@ axios.interceptors.response.use(res => {
   if (res.data.code === 111) {
     sessionStorage.setItem('token', '')
     // token过期操作
+    console.log('Interceptors.response: token is outdated')
   }
   return res
 })
