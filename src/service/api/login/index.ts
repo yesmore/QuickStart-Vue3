@@ -12,8 +12,5 @@ export const login = (params: ILogin): Promise<IResponse> => {
 }
 
 export const photo = () => {
-  // const res = axios.get('pb?p=6');
-  // console.log(res.data);
-
   return axios.get('pb?p=6')
 }
