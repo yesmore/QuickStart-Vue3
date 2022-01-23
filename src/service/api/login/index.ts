@@ -11,6 +11,10 @@ export const login = (params: ILogin): Promise<IResponse> => {
   return axios.post('user/login', params).then(res => res.data)
 }
 
-export const photo = () => {
+/**
+ * @description: 用户头像
+ * @returns {Promise}
+ */
+export const getAvatar = (): Promise<IResponse> => {
   return axios.get('pb?p=6')
 }

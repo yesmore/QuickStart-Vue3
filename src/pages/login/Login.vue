@@ -3,46 +3,42 @@
     <div>
       <h2>🚀 QuickStart Vue3</h2>
       <a href="http://v2.aoau.top/pb?p=6" target="_blank">
-        <img v-if="state.avatar !== ''" :src="state.avatar" alt="user" />
+        <img v-if="avatar !== ''" :src="avatar" alt="user" />
       </a>
 
       <br />
-      {{ mainStore.name }}
-      <br />
-      {{ mainStore.nameLength }}
+      {{ name }} ({{ nameLength }})
     </div>
     <n-button @click="updateName"> 点击登录</n-button>
   </div>
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue'
-import { useSettingsOutsideStore } from '@/store/modules/settings'
+import { storeToRefs } from 'pinia'
+import { useSettingsOutsideStore } from '@/store/modules/auth'
 import { NButton } from 'naive-ui'
-import { login, photo } from '@/service/api/login'
+import { login, getAvatar } from '@/service/api/login'
 
 const mainStore = useSettingsOutsideStore()
-const state = reactive({
-  avatar: '',
-})
 
 // .env
 // console.log(import.meta.env.VITE_APP_BASE_URL)
 
-const updateName = () => {
+const updateName = async () => {
+  // myLogin()
+  const avatar = await getAvatar()
+
   mainStore.$patch({
     name: 'yesmore ok',
-  })
-  // myLogin()
-  photo().then(res => {
-    state.avatar = res.data.photoList[2]
-    console.log(res.data)
+    avatar: avatar.data.photoList[2],
   })
 }
 
 const myLogin = () => {
   return login({ username: 'ok', password: '123' })
 }
+
+const { name, avatar, nameLength } = storeToRefs(mainStore)
 </script>
 
 <style lang="scss" scoped>
@@ -50,7 +46,7 @@ const myLogin = () => {
   text-align: center;
   color: $test-color;
   font-size: 24px;
-  margin: 100px auto;
+  margin: 70px auto;
 }
 img {
   width: 100px;

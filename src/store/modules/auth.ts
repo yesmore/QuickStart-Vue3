@@ -5,6 +5,7 @@ export const useSettingsStore = defineStore({
   id: 'settings',
   state: () => ({
     name: '未登陆',
+    avatar: '',
   }),
   getters: {
     nameLength: state => state.name.length,

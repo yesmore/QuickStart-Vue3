@@ -1,17 +1,16 @@
-# QuickStart-Vue3
+# 🚀 QuickStart-Vue3
 
-`QuickStart-Vue3` 结合了 `Vue3+Vite2+TypeScript+Pinia` 等Vue技术栈，简单轻便，**开箱即用**。
+`QuickStart-Vue3` 结合了 `Vue3+Vite2+TypeScript+Pinia` 等 Vue 技术栈，简单轻便，**开箱即用**。
 
 ## 特点
 
-- 基于 `Vue3+Vite2+TypeScript+Pinia`
-- 支持代码格式化 `ESLint + Prettier`
-- 支持 [husky](https://github.com/typicode/husky) 和 [lint-staged](https://github.com/okonet/lint-staged) 自动化代码规范
-- 支持`axios(ts)`（已封装）
-- 内置 `SCSS`
-- 依赖 `naive-ui`（可自行更换）
-
-
+- 🚀 基于 `Vue3+Vite2+TypeScript+Pinia`
+- 🌈 支持代码格式化 `ESLint + Prettier`
+- 🔥 支持 `Pinia` 状态管理（附 [Pinia 购物车](https://github.com/yesmore/pre-interview/tree/main/practices/vue3/pinia-vue3)案例）
+- 🔨 支持 [husky](https://github.com/typicode/husky) 和 [lint-staged](https://github.com/okonet/lint-staged) 自动化代码规范
+- 💘 支持`axios(ts)`（已封装）
+- 😎 内置 `SCSS`
+- ✨ 依赖 `naive-ui`（可自行更换）
 
 ## 快速开始
 
@@ -20,7 +19,7 @@
 - Vscode 编辑器
 - Chrome 浏览器
 - Nodejs ^12.x & npm/yarn：本地开发环境
-- Vue Language Features (Volar) ：Vue3必备插件
+- Vue Language Features (Volar) ：Vue3 必备插件
 - Vue 3 Snippets：代码提示插件
 
 ### 常用命令
@@ -41,8 +40,6 @@ $ yarn
 # 启动
 $ yarn dev
 ```
-
-
 
 #### 代码格式化
 
@@ -76,8 +73,6 @@ $ yarn build:pro
 ```
 
 更多命令请查看：[package.json](https://github.com/yesmore/QuickStart-Vue3/blob/main/package.json)
-
-
 
 ## 详细配置
 
