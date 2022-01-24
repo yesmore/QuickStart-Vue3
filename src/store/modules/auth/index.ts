@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
-import piniaStore from '../index'
+import piniaStore from '@/store'
+// import { IAuth } from './types'
 
 export const useSettingsStore = defineStore({
   id: 'settings',

@@ -14,6 +14,8 @@
 
 ## 快速开始
 
+
+
 ### 环境准备
 
 - Vscode 编辑器
@@ -22,15 +24,37 @@
 - Vue Language Features (Volar) ：Vue3 必备插件
 - Vue 3 Snippets：代码提示插件
 
-### 常用命令
+### 使用 `qsvc` 脚手架快速开始（推荐）
 
-#### 克隆项目
+ `QuickStart-Vue3` 配套**轻量**脚手架工具 [QuickStart-Vue3-CLI](https://github.com/yesmore/QuickStart-Vue3-CLI) （以下简称 `qsvc`），可以帮您更加快速启动一个 Vue3 项目，目前 `qsvc` 仅支持该仓库模板使用，后期会考虑增加其他功能，但就现在来说，此 CLI 工具应对 `Vue3+Vite2+TypeScript+Pinia` 技术栈绰绰有余。
+
+#### 1.安装脚手架
+
+```shell
+$ npm i -g quickstart-vue3-cli
+```
+
+#### 2.创建一个Vue3项目
+
+```shell
+$ qsvc create vue3-demo
+```
+
+> 执行此步骤后，脚手架会自动拉取 `QuickStart-Vue3` 仓库中main分支代码，并自动安装所需依赖（执行 `yarn` 命令），请确保您安装了yarn工具包（`npm i -g yarn`），安装完成后，项目将自动打开浏览器，并运行在 http://localhost:8000/.
+
+`qsvc`  **可通过终端命令快速创建项目的page、component、store-modules**，详细使用方法请查看 [QuickStart-Vue3-CLI 开发文档](https://github.com/yesmore/QuickStart-Vue3-CLI) 
+
+
+
+### 使用手动下载项目
+
+#### 1.克隆项目
 
 ```shell
 $ git clone https://github.com/yesmore/QuickStart-Vue3.git
 ```
 
-#### 本地调试
+#### 2.本地调试
 
 ```shell
 $ cd QuickStart-Vue3
@@ -40,6 +64,10 @@ $ yarn
 # 启动
 $ yarn dev
 ```
+
+
+
+## 常用命令
 
 #### 代码格式化
 
@@ -80,4 +108,4 @@ $ yarn build:pro
 
 ## License
 
-[MIT]()
+[GPL](https://github.com/yesmore/QuickStart-Vue3/blob/main/LICENSE)
