@@ -1,7 +1,7 @@
 <template>
   <div class="test">
     <div>
-      <h2>🚀 QuickStart Vue3</h2>
+      <HelloWorld />
       <a href="http://v2.aoau.top/pb?p=6" target="_blank">
         <img v-if="avatar !== ''" :src="avatar" alt="user" />
       </a>
@@ -14,6 +14,8 @@
 </template>
 
 <script setup lang="ts">
+import HelloWorld from '@/components/HelloWorld.vue'
+
 import { storeToRefs } from 'pinia'
 import { useSettingsOutsideStore } from '@/store/modules/auth'
 import { NButton } from 'naive-ui'
