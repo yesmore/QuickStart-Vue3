@@ -5,12 +5,15 @@
 ## 特点
 
 - 🚀 基于 `Vue3+Vite2+TypeScript+Pinia`
+- 🔰  配套脚手架工具 [yesmore/QuickStart-Vue3-CLI](https://github.com/yesmore/QuickStart-Vue3-CLI)
 - 🌈 支持代码格式化 `ESLint + Prettier`
 - 🔥 支持 `Pinia` 状态管理（附 [Pinia 购物车](https://github.com/yesmore/pre-interview/tree/main/practices/vue3/pinia-vue3)案例）
 - 🔨 支持 [husky](https://github.com/typicode/husky) 和 [lint-staged](https://github.com/okonet/lint-staged) 自动化代码规范
 - 💘 支持`axios(ts)`（已封装）
 - 😎 内置 `SCSS`
 - ✨ 依赖 `naive-ui`（可自行更换）
+
+
 
 ## 快速开始
 
