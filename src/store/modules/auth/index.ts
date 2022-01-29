@@ -1,13 +1,16 @@
 import { defineStore } from 'pinia'
 import piniaStore from '@/store'
-// import { IAuth } from './types'
+import { IAuth } from './types'
 
 export const useSettingsStore = defineStore({
   id: 'settings',
-  state: () => ({
-    name: '未登陆',
-    avatar: '',
-  }),
+  state: () =>
+    ({
+      name: '未登陆',
+      avatar: '',
+      token: '',
+    } as IAuth),
+
   getters: {
     nameLength: state => state.name.length,
   },
