@@ -7,3 +7,4 @@ dist-ssr
 yarn.lock
 package-lock.json
 .gitattributes
+.prettierrc.js
